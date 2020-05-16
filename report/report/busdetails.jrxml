@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     busdetail.`busid` AS busdetail_busid,
+     busdetail.`place_from` AS busdetail_place_from,
+     busdetail.`place_to` AS busdetail_place_to,
+     busdetail.`arrival` AS busdetail_arrival,
+     busdetail.`departure` AS busdetail_departure,
+     busdetail.`fare` AS busdetail_fare,
+     busdetail.`type` AS busdetail_type,
+     busdetail.`seats` AS busdetail_seats
+FROM
+     `busdetail` busdetail]]>
+	</queryString>
+	<field name="busdetail_busid" class="java.lang.Integer"/>
+	<field name="busdetail_place_from" class="java.lang.String"/>
+	<field name="busdetail_place_to" class="java.lang.String"/>
+	<field name="busdetail_arrival" class="java.lang.String"/>
+	<field name="busdetail_departure" class="java.lang.String"/>
+	<field name="busdetail_fare" class="java.lang.Integer"/>
+	<field name="busdetail_type" class="java.lang.String"/>
+	<field name="busdetail_seats" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="184" y="0" width="277" height="79"/>
+				<textElement>
+					<font fontName="DaunPenh" size="48" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[BUS DETAILS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="84" height="22"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Busid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="2" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Place_from]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="86" height="22"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Place_to]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="57" height="22"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Arrival]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="64" height="22"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="60" height="22"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="2" width="65" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seats]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="2" width="39" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fare]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="84" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_busid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_place_from}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="86" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_place_to}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="51" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_arrival}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="0" width="56" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_departure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="38" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_fare}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="52" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="0" width="65" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{busdetail_seats}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
